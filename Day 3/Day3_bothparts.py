@@ -30,7 +30,7 @@ def getSilver(data):
     return powerCon
 
 def getGold(data):
-
+    
     bit = 0
     maxData = data.copy()
     while bit < len(maxData[0]):
@@ -73,7 +73,6 @@ def getGold(data):
 
     lifeSupport = (int(maxData[0], 2)) * (int(minData[0], 2))
     return lifeSupport
-
 
 def main():
     print("The power consumption is:", getSilver(data))
