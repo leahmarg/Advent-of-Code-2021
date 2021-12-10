@@ -13,7 +13,6 @@ def getSilver(data):
         ones = 0
         zeros  = 0 
         for i in range(len(data)):
-            
             if data[i][bit] == '1':
                 ones += 1
             else:
@@ -34,7 +33,6 @@ def getGold(data):
 
     bit = 0
     maxData = data.copy()
-
     while bit < len(maxData[0]):
         if len(maxData) == 1:
             break
@@ -42,7 +40,6 @@ def getGold(data):
         ones = []
         zeros = []
         for i in range(len(maxData)):
-
             if maxData[i][bit] == '1':
                 ones.append(maxData[i])
             else:
@@ -52,19 +49,16 @@ def getGold(data):
             maxData = ones
         else:
             maxData = zeros
-
         bit += 1
 
     bit = 0
     minData = data.copy()
-
     while bit < len(minData[0]):
         if len(minData) == 1:
             break
 
         ones = []
         zeros = []
-
         for i in range(len(minData)):
             if minData[i][bit] == '1':
                 ones.append(minData[i])
@@ -75,7 +69,6 @@ def getGold(data):
             minData = zeros
         else:
             minData = ones
-
         bit += 1
 
     lifeSupport = (int(maxData[0], 2)) * (int(minData[0], 2))
