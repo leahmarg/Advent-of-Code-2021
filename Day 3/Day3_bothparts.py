@@ -79,7 +79,6 @@ def getGold(data):
         bit += 1
 
     lifeSupport = (int(maxData[0], 2)) * (int(minData[0], 2))
-
     return lifeSupport
 
 
